@@ -34,7 +34,11 @@ export function Hero() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             {socialLinks.map((link) => (
-              <ActionButton key={link.label} {...link} variant="ghost" />
+              <ActionButton
+                key={link.label}
+                {...link}
+                variant={link.href ? 'secondary' : 'ghost'}
+              />
             ))}
           </div>
         </motion.div>
