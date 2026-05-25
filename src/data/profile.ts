@@ -1,6 +1,6 @@
-import type { ActionLink } from '../types'
+import type { ActionLink, ContactLink, Profile } from '../types'
 
-export const profile = {
+export const profile: Profile = {
   name: 'Carlos Andrés Villamil Yusunguaira',
   role: 'Desarrollador Backend / Fullstack Junior',
   location: 'Neiva, Huila, Colombia',
@@ -38,34 +38,40 @@ export const socialLinks: ActionLink[] = [
   },
 ]
 
-export const contactLinks: ActionLink[] = [
+export const contactLinks: ContactLink[] = [
   {
     label: 'GitHub',
+    icon: 'github',
     status: 'pending',
     note: 'Pendiente de agregar URL pública',
   },
   {
     label: 'LinkedIn',
+    icon: 'linkedin',
     status: 'pending',
     note: 'Pendiente de agregar URL pública',
   },
   {
     label: 'Correo',
+    icon: 'mail',
     status: 'pending',
     note: 'Pendiente de definir correo profesional',
   },
   {
     label: 'WhatsApp',
+    icon: 'whatsapp',
     status: 'pending',
     note: 'Pendiente de definir enlace público con formato internacional',
   },
   {
     label: 'CV Español',
+    icon: 'file',
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
     newTab: true,
   },
   {
     label: 'CV Inglés',
+    icon: 'file',
     status: 'pending',
     note: 'CV English próximamente',
   },

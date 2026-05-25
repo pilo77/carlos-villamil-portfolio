@@ -10,6 +10,20 @@ export interface ActionLink {
   newTab?: boolean
 }
 
+export interface Profile {
+  name: string
+  role: string
+  location: string
+  summary: string
+  about: string
+}
+
+export type ContactIconName = 'github' | 'linkedin' | 'mail' | 'whatsapp' | 'file'
+
+export interface ContactLink extends ActionLink {
+  icon: ContactIconName
+}
+
 export interface Project {
   name: string
   featured?: boolean
