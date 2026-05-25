@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#08111f"/>
+  <circle cx="1020" cy="90" r="230" fill="#14b8a6" opacity=".18"/>
+  <circle cx="160" cy="560" r="260" fill="#2563eb" opacity=".16"/>
+  <rect x="82" y="78" width="1036" height="474" rx="38" fill="#0f172a" stroke="#1f3a4a" stroke-width="2"/>
+  <text x="132" y="210" fill="#5eead4" font-family="Arial, sans-serif" font-size="34" font-weight="700">Desarrollador Backend / Fullstack Junior</text>
+  <text x="132" y="310" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="700">Carlos Andres Villamil</text>
+  <text x="132" y="382" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="30">Java · Spring Boot · APIs REST · Bases de datos · React</text>
+  <rect x="132" y="438" width="238" height="58" rx="12" fill="#5eead4"/>
+  <text x="162" y="476" fill="#061018" font-family="Arial, sans-serif" font-size="24" font-weight="700">Portafolio 2026</text>
+</svg>

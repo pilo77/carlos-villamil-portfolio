@@ -1,0 +1,56 @@
+import type { LucideIcon } from 'lucide-react'
+
+export type LinkStatus = 'available' | 'disabled' | 'pending'
+
+export interface ActionLink {
+  label: string
+  href?: string
+  status?: LinkStatus
+  note?: string
+  newTab?: boolean
+}
+
+export interface Project {
+  name: string
+  featured?: boolean
+  status: string
+  mockupLabel: string
+  description: string
+  problem: string
+  role: string
+  learning: string
+  technologies: string[]
+  links: ActionLink[]
+  repoLinks?: RepositoryLink[]
+}
+
+export interface RepositoryLink {
+  label: string
+  url: string
+  status: 'available' | 'pending'
+}
+
+export interface ServiceLink {
+  name: string
+  url: string
+  description: string
+  status: string
+}
+
+export interface SkillGroup {
+  category: string
+  icon: LucideIcon
+  items: string[]
+}
+
+export interface CertificationGroup {
+  organization: string
+  topics: string[]
+}
+
+export interface TimelineItem {
+  period: string
+  title: string
+  description: string
+  tags: string[]
+}
