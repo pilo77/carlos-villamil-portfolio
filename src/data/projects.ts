@@ -67,23 +67,23 @@ export const projects: Project[] = [
     repoLinks: [
       {
         label: 'Frontend',
-        url: 'PENDIENTE_URL_REPO_FRONTEND',
         status: 'pending',
+        note: 'Agregar URL real del repositorio frontend cuando esté público.',
       },
       {
         label: 'Backend / Microservicios',
-        url: 'PENDIENTE_URL_REPO_BACKEND',
         status: 'pending',
+        note: 'Agregar URL real del repositorio backend cuando esté público.',
       },
       {
         label: 'API Gateway',
-        url: 'PENDIENTE_URL_REPO_API_GATEWAY',
         status: 'pending',
+        note: 'Agregar URL real del API Gateway cuando esté público.',
       },
       {
         label: 'Base de datos / Documentación',
-        url: 'PENDIENTE_URL_REPO_DB',
         status: 'pending',
+        note: 'Agregar URL real de documentación o base de datos cuando esté pública.',
       },
     ],
   },

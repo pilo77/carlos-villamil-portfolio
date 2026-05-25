@@ -24,6 +24,7 @@ export function RepositoryLinks({ repositories }: RepositoryLinksProps) {
               aria-disabled="true"
               className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-400"
               key={repo.label}
+              title={repo.note}
             >
               {repo.label}: Repositorio pendiente
             </span>

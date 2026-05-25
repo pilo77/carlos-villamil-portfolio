@@ -38,11 +38,19 @@ export interface Project {
   repoLinks?: RepositoryLink[]
 }
 
-export interface RepositoryLink {
+interface AvailableRepositoryLink {
   label: string
+  status: 'available'
   url: string
-  status: 'available' | 'pending'
 }
+
+interface PendingRepositoryLink {
+  label: string
+  status: 'pending'
+  note?: string
+}
+
+export type RepositoryLink = AvailableRepositoryLink | PendingRepositoryLink
 
 export interface ServiceLink {
   name: string

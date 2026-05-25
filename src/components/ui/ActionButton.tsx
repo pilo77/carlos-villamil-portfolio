@@ -1,5 +1,6 @@
 import type { ActionLink } from '../../types'
 import { clsx } from 'clsx'
+import { getSafeAnchorProps } from '../../utils/links'
 
 interface ActionButtonProps extends ActionLink {
   variant?: 'primary' | 'secondary' | 'ghost'
@@ -42,8 +43,7 @@ export function ActionButton({
     <a
       className={clsx(baseClass, variantClass[variant])}
       href={href}
-      target={newTab || href.startsWith('http') ? '_blank' : undefined}
-      rel={newTab || href.startsWith('http') ? 'noopener noreferrer' : undefined}
+      {...getSafeAnchorProps(href, newTab)}
     >
       {label}
     </a>

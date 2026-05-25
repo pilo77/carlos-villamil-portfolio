@@ -1,5 +1,6 @@
 import { CheckCircle2, ExternalLink } from 'lucide-react'
 import { rematePosServices } from '../../data/projects'
+import { getSafeAnchorProps } from '../../utils/links'
 import { ActionButton } from '../ui/ActionButton'
 import { Section } from '../ui/Section'
 
@@ -82,8 +83,7 @@ export function CaseStudy() {
                 className="rounded-lg border border-white/10 bg-slate-950/45 p-4 transition hover:border-teal-300/40 hover:bg-slate-950/70"
                 href={service.url}
                 key={service.name}
-                rel="noopener noreferrer"
-                target="_blank"
+                {...getSafeAnchorProps(service.url)}
               >
                 <div className="flex items-center justify-between gap-3">
                   <p className="font-semibold text-white">{service.name}</p>
