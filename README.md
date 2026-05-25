@@ -26,6 +26,11 @@ Estado actual: demo cloud disponible / despliegue académico.
 Enlaces configurados:
 
 - Demo frontend: https://rematepos-frontend.onrender.com
+- Código principal: https://github.com/RematePos/RematePos
+- Frontend: https://github.com/RematePos/RematePos-Frontend
+- Backend / Microservicios: https://github.com/RematePos/RematePos-Backend
+- API / Gateway: https://github.com/RematePos/RematePos-api
+- Base de datos / Documentación: https://github.com/RematePos/RematePos-bd
 - API Gateway: mostrado como endpoint técnico, pendiente de respuesta en validación HTTP.
 - Customer Service: mostrado como endpoint técnico, pendiente de respuesta en validación HTTP.
 
@@ -68,6 +73,8 @@ src/
 public/
   cv/
     CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf
+  images/
+    profile-carlos.png
 ```
 
 ## Contenido editable
@@ -116,8 +123,17 @@ Pasos:
 - Portafolio construido con React + TypeScript + Vite.
 - RematePOS configurado como proyecto principal con demo y servicios cloud.
 - CV en español servido desde `public/cv`.
-- CV en inglés, GitHub, LinkedIn, correo, WhatsApp y repositorios de RematePOS quedan pendientes hasta tener enlaces reales.
+- Foto profesional servida desde `public/images`.
+- GitHub, correo y WhatsApp configurados como contacto público.
+- LinkedIn y CV en inglés quedan pendientes hasta tener enlaces reales.
 - No se incluyen secretos ni rutas locales públicas.
+
+## Enlaces de contacto
+
+- GitHub: https://github.com/pilo77
+- Correo: carlosandresvilla123carlos@gmail.com
+- WhatsApp: https://wa.me/573229417100
+- LinkedIn: pendiente de URL vigente.
 
 ## Autor
 
