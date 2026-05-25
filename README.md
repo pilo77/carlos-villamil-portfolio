@@ -26,8 +26,8 @@ Estado actual: demo cloud disponible / despliegue academico.
 Enlaces configurados:
 
 - Demo frontend: https://rematepos-frontend.onrender.com
-- API Gateway: https://rematepos-api-gateway.onrender.com
-- Customer Service: https://tematepos-customer.onrender.com
+- API Gateway: mostrado como endpoint tecnico, pendiente de respuesta en validacion HTTP.
+- Customer Service: mostrado como endpoint tecnico, pendiente de respuesta en validacion HTTP.
 
 Nota: RematePOS se presenta como proyecto academico en evolucion, desplegado para demostracion tecnica. No se afirma que sea un producto comercial terminado.
 

@@ -78,21 +78,40 @@ export function CaseStudy() {
           </div>
 
           <div className="mt-7 grid gap-4 md:grid-cols-3">
-            {rematePosServices.map((service) => (
-              <a
-                className="rounded-lg border border-white/10 bg-slate-950/45 p-4 transition hover:border-teal-300/40 hover:bg-slate-950/70"
-                href={service.url}
-                key={service.name}
-                {...getSafeAnchorProps(service.url)}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-semibold text-white">{service.name}</p>
-                  <ExternalLink size={16} aria-hidden="true" className="text-teal-200" />
-                </div>
-                <p className="mt-2 text-sm font-semibold text-teal-200">{service.status}</p>
-                <p className="mt-3 text-sm leading-6 text-slate-400">{service.description}</p>
-              </a>
-            ))}
+            {rematePosServices.map((service) => {
+              const content = (
+                <>
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="font-semibold text-white">{service.name}</p>
+                    {service.linkStatus === 'available' ? (
+                      <ExternalLink size={16} aria-hidden="true" className="text-teal-200" />
+                    ) : null}
+                  </div>
+                  <p className="mt-2 text-sm font-semibold text-teal-200">{service.status}</p>
+                  <p className="mt-3 text-sm leading-6 text-slate-400">{service.description}</p>
+                  <p className="mt-3 break-all text-xs text-slate-500">{service.url}</p>
+                </>
+              )
+
+              return service.linkStatus === 'available' ? (
+                <a
+                  className="rounded-lg border border-white/10 bg-slate-950/45 p-4 transition hover:border-teal-300/40 hover:bg-slate-950/70"
+                  href={service.url}
+                  key={service.name}
+                  {...getSafeAnchorProps(service.url)}
+                >
+                  {content}
+                </a>
+              ) : (
+                <article
+                  aria-disabled="true"
+                  className="rounded-lg border border-white/10 bg-slate-950/30 p-4 text-slate-400"
+                  key={service.name}
+                >
+                  {content}
+                </article>
+              )
+            })}
           </div>
         </div>
 

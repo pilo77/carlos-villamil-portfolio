@@ -57,6 +57,7 @@ export interface ServiceLink {
   url: string
   description: string
   status: string
+  linkStatus: LinkStatus
 }
 
 export interface SkillGroup {

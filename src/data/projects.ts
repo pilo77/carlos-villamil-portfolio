@@ -6,18 +6,21 @@ export const rematePosServices: ServiceLink[] = [
     url: 'https://rematepos-frontend.onrender.com',
     description: 'Interfaz web desplegada para demostración técnica.',
     status: 'Demo cloud',
+    linkStatus: 'available',
   },
   {
     name: 'API Gateway',
     url: 'https://rematepos-api-gateway.onrender.com',
     description: 'Entrada centralizada para consumo de servicios backend.',
-    status: 'Demo cloud',
+    status: 'Pendiente de respuesta',
+    linkStatus: 'pending',
   },
   {
     name: 'Customer Service',
     url: 'https://tematepos-customer.onrender.com',
     description: 'Servicio de clientes expuesto como parte del ecosistema académico.',
-    status: 'Demo cloud',
+    status: 'Pendiente de respuesta',
+    linkStatus: 'pending',
   },
 ]
 
