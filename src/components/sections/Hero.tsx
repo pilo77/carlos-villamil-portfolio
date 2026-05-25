@@ -45,24 +45,24 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
         >
-          <div className="overflow-hidden rounded-[2rem] border border-white/12 bg-white/8 p-6 shadow-2xl shadow-slate-950/50">
-            <div className="aspect-[4/5] rounded-[1.5rem] bg-[linear-gradient(145deg,rgba(20,184,166,0.22),rgba(59,130,246,0.14)),radial-gradient(circle_at_35%_20%,rgba(255,255,255,0.2),transparent_24rem)] p-6">
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-white/14 bg-slate-950/40 p-6 backdrop-blur">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-200">
-                    Backend Focus
-                  </p>
-                  <div className="mt-8 grid size-28 place-items-center rounded-3xl bg-teal-300 text-4xl font-bold text-slate-950 shadow-xl shadow-teal-950/40">
-                    CV
-                  </div>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-white">Java · APIs · Datos</p>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">
-                    Perfil junior orientado a proyectos reales, documentación clara y buenas
-                    prácticas de desarrollo.
-                  </p>
-                </div>
+          <div className="overflow-hidden rounded-[2rem] border border-white/12 bg-white/8 p-4 shadow-2xl shadow-slate-950/50">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-slate-950">
+              <img
+                alt={profile.imageAlt}
+                className="h-full w-full object-cover object-[50%_18%]"
+                height="900"
+                src={profile.imageSrc}
+                width="720"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/78 to-transparent p-6 pt-24">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-200">
+                  Backend Focus
+                </p>
+                <p className="mt-3 text-2xl font-semibold text-white">Java · APIs · Datos</p>
+                <p className="mt-3 text-sm leading-6 text-slate-200">
+                  Perfil junior orientado a proyectos reales, documentación clara y buenas prácticas
+                  de desarrollo.
+                </p>
               </div>
             </div>
           </div>

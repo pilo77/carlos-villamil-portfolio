@@ -16,6 +16,8 @@ export interface Profile {
   location: string
   summary: string
   about: string
+  imageSrc: string
+  imageAlt: string
 }
 
 export type ContactIconName = 'github' | 'linkedin' | 'mail' | 'whatsapp' | 'file'

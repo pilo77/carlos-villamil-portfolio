@@ -8,6 +8,8 @@ export const profile: Profile = {
     'Estudiante de Ingeniería de Sistemas enfocado en el desarrollo de soluciones web, APIs REST, bases de datos y arquitectura backend. He trabajado en proyectos académicos y personales aplicando Java, Spring Boot, React, SQL, NoSQL, Git y Docker, con interés en construir software limpio, escalable y útil para entornos reales.',
   about:
     'Soy estudiante de Ingeniería de Sistemas, con interés en el desarrollo de software, backend, bases de datos y aplicaciones web. He trabajado en proyectos académicos y personales aplicando Java, Spring Boot, JavaScript, React, SQL, NoSQL, Git y Docker. Me caracterizo por la responsabilidad, la facilidad de aprendizaje y la disposición para asumir nuevos retos tecnológicos.',
+  imageSrc: '/images/profile-carlos.png',
+  imageAlt: 'Foto profesional de Carlos Andrés Villamil Yusunguaira',
 }
 
 export const primaryActions: ActionLink[] = [
@@ -28,8 +30,8 @@ export const primaryActions: ActionLink[] = [
 export const socialLinks: ActionLink[] = [
   {
     label: 'GitHub',
-    status: 'pending',
-    note: 'Pendiente de agregar URL pública',
+    href: 'https://github.com/pilo77',
+    newTab: true,
   },
   {
     label: 'LinkedIn',
@@ -42,8 +44,8 @@ export const contactLinks: ContactLink[] = [
   {
     label: 'GitHub',
     icon: 'github',
-    status: 'pending',
-    note: 'Pendiente de agregar URL pública',
+    href: 'https://github.com/pilo77',
+    newTab: true,
   },
   {
     label: 'LinkedIn',
@@ -54,14 +56,13 @@ export const contactLinks: ContactLink[] = [
   {
     label: 'Correo',
     icon: 'mail',
-    status: 'pending',
-    note: 'Pendiente de definir correo profesional',
+    href: 'mailto:carlosandresvilla123carlos@gmail.com',
   },
   {
     label: 'WhatsApp',
     icon: 'whatsapp',
-    status: 'pending',
-    note: 'Pendiente de definir enlace público con formato internacional',
+    href: 'https://wa.me/573229417100',
+    newTab: true,
   },
   {
     label: 'CV Español',
