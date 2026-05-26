@@ -1,26 +1,30 @@
 import { motion } from 'framer-motion'
-import { Code2, Mail, MapPin, MessageCircle, Network } from 'lucide-react'
+import { MapPin } from 'lucide-react'
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+import { SiCredly } from 'react-icons/si'
 import { primaryActions, profile, socialLinks } from '../../data/profile'
 import { ActionButton } from '../ui/ActionButton'
 import { SocialIconButton } from '../ui/SocialIconButton'
 import { TypewriterText } from '../ui/TypewriterText'
 
 const socialIconByLabel = {
-  Email: Mail,
-  GitHub: Code2,
-  LinkedIn: Network,
-  WhatsApp: MessageCircle,
+  Credly: SiCredly,
+  Email: MdEmail,
+  GitHub: FaGithub,
+  LinkedIn: FaLinkedinIn,
+  WhatsApp: FaWhatsapp,
 }
 
 const typewriterPhrases = [
-  'Desarrollador Backend Junior',
-  'Fullstack Junior',
-  'Java + Spring Boot',
-  'APIs REST y Bases de Datos',
-  'React + TypeScript',
+  'Construyo APIs REST con Java y Spring Boot',
+  'Desarrollo interfaces con React y TypeScript',
+  'Trabajo con bases de datos SQL y NoSQL',
+  'Documento soluciones técnicas claras',
+  'Aplico buenas prácticas con Git y Docker',
 ]
 
-const actionVariantByIndex = ['primary', 'secondary', 'outline'] as const
+const actionVariantByIndex = ['primary', 'secondary', 'outline', 'outline'] as const
 
 export function Hero() {
   return (
@@ -50,8 +54,15 @@ export function Hero() {
             {profile.name}
           </h1>
 
-          <p className="mt-5 min-h-9 text-2xl font-semibold text-teal-200 sm:text-3xl">
-            Soy <TypewriterText phrases={typewriterPhrases} />
+          <p className="mt-4 text-xl font-semibold text-slate-100 sm:text-2xl">{profile.role}</p>
+
+          <p className="mt-5 flex min-h-[5.25rem] flex-col gap-2 text-xl font-semibold text-teal-200 sm:text-2xl">
+            <span className="text-sm uppercase tracking-[0.22em] text-slate-400 sm:text-base">
+              Enfoque profesional
+            </span>
+            <span>
+              <TypewriterText phrases={typewriterPhrases} />
+            </span>
           </p>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
