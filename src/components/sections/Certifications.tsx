@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { certificationGroups } from '../../data/certifications'
+import { ActionButton } from '../ui/ActionButton'
 import { Section } from '../ui/Section'
 
 export function Certifications() {
@@ -9,6 +10,19 @@ export function Certifications() {
       eyebrow="Formación"
       title="Certificaciones y áreas de aprendizaje verificables"
     >
+      <div className="mb-6 flex flex-col gap-4 border-y border-white/10 py-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="max-w-3xl text-base leading-7 text-slate-300">
+          Certificaciones verificables en Cisco, IBM SkillsBuild, CertiProf, The Linux Foundation y
+          otras plataformas.
+        </p>
+        <ActionButton
+          href="https://www.credly.com/users/carlos-andres-villamil-yusunguaira"
+          label="Ver perfil completo en Credly"
+          newTab
+          variant="outline"
+        />
+      </div>
+
       <div className="grid gap-4 md:grid-cols-2">
         {certificationGroups.map((group, index) => (
           <motion.article
