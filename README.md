@@ -2,7 +2,7 @@
 
 Portafolio web profesional de Carlos Andrés Villamil Yusunguaira, estudiante de Ingeniería de Sistemas en CORHUILA, enfocado en práctica profesional, contrato de aprendizaje o primer rol junior en desarrollo backend/fullstack.
 
-El objetivo del sitio es presentar perfil profesional, proyectos reales, habilidades técnicas, certificaciones, CV y canales de contacto para hoja de vida, LinkedIn, GitHub y postulaciones laborales.
+El objetivo del sitio es presentar perfil profesional, proyectos reales, habilidades técnicas, certificaciones, CV en español y canales de contacto para hoja de vida, LinkedIn, GitHub y postulaciones laborales.
 
 ## Tecnologías
 
@@ -23,7 +23,7 @@ El objetivo del sitio es presentar perfil profesional, proyectos reales, habilid
 - Iconografía reconocible para GitHub, LinkedIn, WhatsApp, correo y Credly.
 - Fondo oscuro con grid sutil, spotlight y gradientes controlados.
 - Proyectos con imagen/mockup, overlay al hover y repositorios agrupados.
-- Contacto compacto tipo dock con acciones principales y CV.
+- Contacto compacto tipo dock con acciones principales y CV en español.
 
 ## Proyecto destacado
 
@@ -33,18 +33,24 @@ Aplicación web para gestión de ventas, productos, inventario, clientes, caja, 
 
 Estado actual: demo cloud disponible / despliegue académico.
 
-Enlaces configurados:
+Enlaces principales:
 
-- Demo frontend: https://rematepos-frontend.onrender.com
-- Código principal: https://github.com/RematePos/RematePos
+- Demo pública: https://rematepos-frontend.onrender.com
 - Frontend: https://github.com/RematePos/RematePos-Frontend
-- Backend / Microservicios: https://github.com/RematePos/RematePos-Backend
-- API / Gateway: https://github.com/RematePos/RematePos-api
+- Backend: https://github.com/RematePos/RematePos-Backend
+- API Gateway: https://github.com/RematePos/RematePos-api
 - Base de datos / Documentación: https://github.com/RematePos/RematePos-bd
-- API Gateway: mostrado como endpoint técnico, pendiente de respuesta en validación HTTP.
-- Customer Service: mostrado como endpoint técnico, pendiente de respuesta en validación HTTP.
 
-Nota: RematePOS se presenta como proyecto académico en evolución, desplegado para demostración técnica. No se afirma que sea un producto comercial terminado.
+Arquitectura cloud de demostración:
+
+- Frontend React
+- API Gateway
+- Microservicios Spring Boot
+- Config / Discovery
+- Bases de datos y documentación
+- Analytics
+
+Nota: RematePOS se presenta como proyecto académico en evolución, desplegado para demostración técnica. Algunos servicios en Render pueden tardar en responder si estaban inactivos.
 
 ## CV
 
@@ -52,12 +58,6 @@ El CV público en español se sirve desde:
 
 ```text
 /cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf
-```
-
-La versión en inglés queda preparada como botón pendiente hasta que exista el archivo real:
-
-```text
-/cv/CV_Carlos_Andres_Villamil_Yusunguaira_EN.pdf
 ```
 
 No se deben usar rutas locales del equipo ni URLs de desarrollo local en enlaces públicos.
@@ -138,7 +138,7 @@ Pasos:
 - Foto profesional servida desde `public/images`.
 - GitHub, LinkedIn, Credly, correo y WhatsApp configurados como contacto público.
 - Perfil Credly configurado para verificar insignias y certificaciones internacionales.
-- CV en inglés queda pendiente hasta tener el archivo real.
+- CV público en español disponible desde `public/cv`.
 - No se incluyen secretos ni rutas locales públicas.
 
 ## Enlaces de contacto
