@@ -31,6 +31,7 @@ export interface Project {
   featured?: boolean
   status: string
   mockupLabel: string
+  summary?: string
   description: string
   problem: string
   role: string
@@ -65,7 +66,12 @@ export interface ServiceLink {
 export interface SkillGroup {
   category: string
   icon: LucideIcon
-  items: string[]
+  items: SkillItem[]
+}
+
+export interface SkillItem {
+  name: string
+  level: 'Fundamentos' | 'En práctica' | 'Intermedio' | 'Proyecto académico'
 }
 
 export interface CertificationGroup {
