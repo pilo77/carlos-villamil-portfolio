@@ -90,10 +90,4 @@ export const contactLinks: ContactLink[] = [
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
     newTab: true,
   },
-  {
-    label: 'CV Inglés',
-    icon: 'file',
-    status: 'pending',
-    note: 'CV English próximamente',
-  },
 ]
