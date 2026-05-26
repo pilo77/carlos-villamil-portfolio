@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Code2, FileText, Menu, Network, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import { FaFilePdf, FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { SiCredly } from 'react-icons/si'
 import { SocialIconButton } from '../ui/SocialIconButton'
 
 const navItems = [
@@ -15,19 +17,25 @@ const navItems = [
 const quickLinks = [
   {
     href: 'https://github.com/pilo77',
-    icon: Code2,
+    icon: FaGithub,
     label: 'GitHub',
     newTab: true,
   },
   {
     href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
-    icon: Network,
+    icon: FaLinkedinIn,
     label: 'LinkedIn',
     newTab: true,
   },
   {
+    href: 'https://www.credly.com/users/carlos-andres-villamil-yusunguaira',
+    icon: SiCredly,
+    label: 'Credly',
+    newTab: true,
+  },
+  {
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
-    icon: FileText,
+    icon: FaFilePdf,
     label: 'CV Español',
     newTab: true,
   },

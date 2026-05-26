@@ -1,11 +1,11 @@
-import type { LucideIcon } from 'lucide-react'
+import type { IconType } from 'react-icons'
 import { clsx } from 'clsx'
 import { getSafeAnchorProps } from '../../utils/links'
 
 interface SocialIconButtonProps {
   disabled?: boolean
   href?: string
-  icon: LucideIcon
+  icon: IconType
   label: string
   newTab?: boolean
   note?: string
