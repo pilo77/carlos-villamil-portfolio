@@ -124,16 +124,16 @@ Pasos:
 - RematePOS configurado como proyecto principal con demo y servicios cloud.
 - CV en español servido desde `public/cv`.
 - Foto profesional servida desde `public/images`.
-- GitHub, correo y WhatsApp configurados como contacto público.
-- LinkedIn y CV en inglés quedan pendientes hasta tener enlaces reales.
+- GitHub, LinkedIn, correo y WhatsApp configurados como contacto público.
+- CV en inglés queda pendiente hasta tener el archivo real.
 - No se incluyen secretos ni rutas locales públicas.
 
 ## Enlaces de contacto
 
 - GitHub: https://github.com/pilo77
+- LinkedIn: https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira
 - Correo: carlosandresvilla123carlos@gmail.com
 - WhatsApp: https://wa.me/573229417100
-- LinkedIn: pendiente de URL vigente.
 
 ## Autor
 
