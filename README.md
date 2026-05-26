@@ -15,6 +15,14 @@ El objetivo del sitio es presentar perfil profesional, proyectos reales, habilid
 - ESLint
 - Prettier
 
+## Diseño e interacción
+
+- Hero compacto con texto dinámico tipo máquina de escribir implementado con React hooks.
+- Botones sociales circulares con estados hover, foco visible y enlaces seguros.
+- Fondo oscuro con grid sutil, spotlight y gradientes controlados.
+- Proyectos con imagen/mockup, overlay al hover y repositorios agrupados.
+- Contacto compacto tipo dock con acciones principales y CV.
+
 ## Proyecto destacado
 
 ### RematePOS - Sistema POS distribuido
@@ -75,6 +83,8 @@ public/
     CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf
   images/
     profile-carlos.png
+    projects/
+      rematepos-preview.png
 ```
 
 ## Contenido editable
