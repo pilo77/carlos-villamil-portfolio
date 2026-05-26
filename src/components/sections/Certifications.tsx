@@ -19,14 +19,14 @@ export function Certifications() {
           href="https://www.credly.com/users/carlos-andres-villamil-yusunguaira"
           label="Ver perfil completo en Credly"
           newTab
-          variant="outline"
+          variant="primary"
         />
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         {certificationGroups.map((group, index) => (
           <motion.article
-            className="rounded-xl border border-white/10 bg-white/8 p-5 transition hover:border-teal-300/35 hover:bg-white/10"
+            className="rounded-2xl border border-white/10 bg-white/8 p-5 transition hover:border-teal-300/35 hover:bg-white/10"
             initial={{ opacity: 0, y: 16 }}
             key={group.organization}
             transition={{ duration: 0.4, delay: index * 0.05 }}
@@ -34,7 +34,7 @@ export function Certifications() {
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h3 className="text-xl font-semibold text-white">{group.organization}</h3>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 leading-6">
               {group.topics.map((topic) => (
                 <span
                   className="rounded-full bg-slate-950/60 px-3 py-1 text-sm text-slate-300"

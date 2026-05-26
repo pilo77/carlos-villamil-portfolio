@@ -16,11 +16,6 @@ export const primaryActions: ActionLink[] = [
   { label: 'Ver proyectos', href: '#proyectos' },
   { label: 'Ver RematePOS', href: '#caso-rematepos' },
   {
-    label: 'Ver insignias en Credly',
-    href: 'https://www.credly.com/users/carlos-andres-villamil-yusunguaira',
-    newTab: true,
-  },
-  {
     label: 'CV Español',
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
     newTab: true,

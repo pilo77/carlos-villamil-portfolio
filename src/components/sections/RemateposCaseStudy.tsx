@@ -58,7 +58,7 @@ export function RemateposCaseStudy() {
               <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
                 {rematePos.title}
               </h3>
-              <p className="mt-4 max-w-4xl text-base leading-8 text-slate-300 sm:text-lg">
+              <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-200 sm:text-xl">
                 {rematePos.description}
               </p>
 
@@ -80,21 +80,23 @@ export function RemateposCaseStudy() {
             </div>
 
             <aside className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-              <div className="rounded-2xl border border-white/10 bg-slate-950/45 p-4">
+              <div className="rounded-2xl border border-teal-300/20 bg-slate-950/55 p-4 shadow-lg shadow-slate-950/15">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-200">Rol</p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{rematePos.role}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-200">{rematePos.role}</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-slate-950/45 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-200">
                   Alcance
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">{rematePos.summary}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-200">{rematePos.summary}</p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-slate-950/45 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-200">
                   Estado
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-300">Demo técnica en Render y repositorios públicos organizados para revisión.</p>
+                <p className="mt-2 text-sm leading-7 text-slate-200">
+                  Demo técnica en Render y repositorios públicos organizados para revisión.
+                </p>
               </div>
             </aside>
           </div>
@@ -107,7 +109,7 @@ export function RemateposCaseStudy() {
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-200">
                   Arquitectura cloud de demostración
                 </p>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400 text-balance">
+                <p className="mt-2 max-w-2xl text-base leading-7 text-slate-300 text-balance">
                   Vista compacta tipo pipeline para entender el flujo técnico en segundos.
                 </p>
               </div>
@@ -137,7 +139,7 @@ export function RemateposCaseStudy() {
                           <h4 className="mt-2 text-sm font-semibold text-white sm:text-base">
                             {block.title}
                           </h4>
-                          <p className="mt-2 max-w-xl text-sm leading-6 text-slate-300 text-balance">
+                          <p className="mt-2 max-w-xl text-base leading-7 text-slate-200 text-balance">
                             {flowMeta.caption}
                           </p>
                         </div>
@@ -174,7 +176,7 @@ export function RemateposCaseStudy() {
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-200">
                   Acciones principales
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-400 text-balance">
+                <p className="mt-2 text-base leading-7 text-slate-300 text-balance">
                   Resumen rápido para abrir la demo y revisar el repositorio correcto sin saturar la vista.
                 </p>
               </div>

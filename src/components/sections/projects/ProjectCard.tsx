@@ -20,7 +20,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.article
       className={`group overflow-hidden rounded-2xl border border-white/10 bg-slate-950/48 p-3 shadow-xl shadow-slate-950/25 ring-1 ring-white/5 transition hover:border-teal-300/35 hover:bg-white/8 sm:p-4 ${
-        project.featured ? 'lg:col-span-2' : ''
+        project.featured ? 'border-teal-300/25 bg-slate-950/58 shadow-2xl shadow-slate-950/30 lg:col-span-2' : ''
       }`}
       initial={{ opacity: 0, y: 22 }}
       transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
@@ -28,12 +28,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileHover={{ y: -6 }}
       whileInView={{ opacity: 1, y: 0 }}
     >
-      <div className={project.featured ? 'grid gap-5 lg:grid-cols-[1.02fr_0.98fr]' : 'grid gap-4'}>
+      <div className={project.featured ? 'grid gap-5 lg:grid-cols-[1.08fr_0.92fr]' : 'grid gap-4'}>
         <div className="relative">
           <ProjectMockup project={project} />
           <div className="absolute inset-0 hidden items-end rounded-2xl bg-gradient-to-t from-slate-950/94 via-slate-950/46 to-transparent p-5 opacity-0 transition duration-300 group-hover:opacity-100 md:flex">
             <div>
-              <p className="text-lg font-semibold text-white">{project.name}</p>
+              <p className="text-lg font-semibold text-white sm:text-xl">{project.name}</p>
               <p className="mt-2 max-w-xl text-sm leading-6 text-slate-300">{project.status}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {overlayLinks.map((link, linkIndex) => (
@@ -54,10 +54,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-200">
                 {project.status}
               </p>
-              <h3 className="mt-2 text-2xl font-semibold text-white">{project.name}</h3>
+              <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[2.15rem]">
+                {project.name}
+              </h3>
             </div>
             {project.featured ? (
-              <span className="rounded-full bg-teal-300 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-950">
+              <span className="rounded-full bg-teal-300 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-950 shadow-[0_10px_30px_rgba(45,212,191,0.22)]">
                 Principal
               </span>
             ) : null}
