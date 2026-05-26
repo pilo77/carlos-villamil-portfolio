@@ -49,20 +49,20 @@ function TechnicalItemCard({
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <p className="text-sm font-semibold text-white">{item.label}</p>
+            <p className="text-base font-semibold text-white">{item.label}</p>
             <StatusBadge label={badgeLabel} tone="muted" />
           </div>
-          <p className="mt-2 text-sm leading-6 text-slate-300 text-balance">
+          <p className="mt-2 text-base leading-7 text-slate-300 text-balance">
             {item.note ?? 'Acceso técnico disponible para revisión en nueva pestaña.'}
           </p>
         </div>
       </div>
 
       <div className="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-3">
-        <span className="rounded-full border border-white/10 bg-white/6 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-300">
+        <span className="rounded-full border border-white/10 bg-white/6 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
           {typeLabel}
         </span>
-        <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">{item.state}</span>
+        <span className="text-xs uppercase tracking-[0.16em] text-slate-400">{item.state}</span>
       </div>
     </a>
   )
@@ -94,8 +94,11 @@ export function TechnicalAccordion({ groups }: TechnicalAccordionProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-200">
             Ver detalles técnicos del despliegue
           </p>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">
+          <p className="mt-2 max-w-3xl text-base leading-7 text-slate-300">
             Servicios, health checks y endpoints técnicos en una vista compacta con pestañas.
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">
+            Algunos servicios desplegados pueden tardar unos segundos en responder si estaban inactivos.
           </p>
         </div>
         <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-sm font-semibold text-slate-200 transition group-open:rotate-180">
@@ -112,7 +115,7 @@ export function TechnicalAccordion({ groups }: TechnicalAccordionProps) {
 
             return (
               <button
-                className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-semibold transition ${
+                className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-semibold transition ${
                   isActive
                     ? 'border-teal-300/35 bg-teal-300/12 text-teal-100'
                     : 'border-white/10 bg-white/6 text-slate-300 hover:border-teal-300/25 hover:text-teal-100'
@@ -131,7 +134,7 @@ export function TechnicalAccordion({ groups }: TechnicalAccordionProps) {
         <div className="mt-5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <GroupIcon size={16} aria-hidden="true" className="text-teal-200" />
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">
+            <p className="text-base font-semibold uppercase tracking-[0.16em] text-slate-200">
               {activeGroupData.title}
             </p>
           </div>

@@ -19,7 +19,7 @@ export function StatusBadge({ label, tone = 'neutral' }: StatusBadgeProps) {
   return (
     <span
       className={clsx(
-        'inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] leading-none',
+        'inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] leading-none',
         toneClass[tone],
       )}
     >

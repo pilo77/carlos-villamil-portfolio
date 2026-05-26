@@ -325,5 +325,5 @@ export const rematePos = {
     },
   ] satisfies RematePosTechnicalGroup[],
   note:
-    'Proyecto académico en evolución, desplegado para demostración técnica. Algunos servicios en Render pueden tardar en responder si estaban inactivos.',
+    'Proyecto académico en evolución, desplegado para demostración técnica. Algunos servicios desplegados pueden tardar unos segundos en responder si estaban inactivos.',
 }

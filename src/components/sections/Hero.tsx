@@ -18,7 +18,7 @@ const socialIconByLabel = {
 
 const typewriterPhrases = [
   'Construyo APIs REST con Java y Spring Boot',
-  'Desarrollo interfaces con React y TypeScript',
+  'Desarrollo de interfaces con React y TypeScript',
   'Trabajo con bases de datos SQL y NoSQL',
   'Documento soluciones técnicas claras',
   'Aplico buenas prácticas con Git y Docker',
