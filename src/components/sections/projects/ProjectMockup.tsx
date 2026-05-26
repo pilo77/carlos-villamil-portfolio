@@ -172,8 +172,19 @@ export function ProjectMockup({ project }: ProjectMockupProps) {
       <div className="absolute inset-0 opacity-55 [background-image:radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.22),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(129,140,248,0.18),transparent_26%)]" />
       <div className="relative flex min-h-[18rem] flex-col">
         <WindowChrome label={project.mockupLabel} />
-        <div className="flex-1">
-          {contentByLabel[project.mockupLabel as keyof typeof contentByLabel] ?? <GenericMockup />}
+        <div className="flex-1 overflow-hidden">
+          {project.imageSrc ? (
+            <img
+              alt={project.imageAlt ?? `Preview visual de ${project.name}`}
+              className="h-full min-h-[18rem] w-full object-cover opacity-82 saturate-125 transition duration-500 group-hover:scale-105"
+              loading="lazy"
+              src={project.imageSrc}
+            />
+          ) : (
+            (contentByLabel[project.mockupLabel as keyof typeof contentByLabel] ?? (
+              <GenericMockup />
+            ))
+          )}
         </div>
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/92 to-transparent p-4">

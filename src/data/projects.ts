@@ -30,6 +30,8 @@ export const projects: Project[] = [
     featured: true,
     status: 'Demo cloud disponible',
     mockupLabel: 'POS',
+    imageSrc: '/images/projects/rematepos-preview.png',
+    imageAlt: 'Vista de inicio de sesión de RematePOS desplegado en Render',
     summary:
       'Aplicación web para ventas, inventario, caja, clientes, devoluciones y facturación simulada tipo DIAN.',
     description:

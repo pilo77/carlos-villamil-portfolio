@@ -31,6 +31,8 @@ export interface Project {
   featured?: boolean
   status: string
   mockupLabel: string
+  imageAlt?: string
+  imageSrc?: string
   summary?: string
   description: string
   problem: string
