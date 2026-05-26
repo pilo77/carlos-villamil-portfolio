@@ -5,7 +5,7 @@ export const profile: Profile = {
   role: 'Desarrollador Backend / Fullstack Junior',
   location: 'Neiva, Huila, Colombia',
   summary:
-    'Estudiante de Ingeniería de Sistemas enfocado en el desarrollo de soluciones web, APIs REST, bases de datos y arquitectura backend. He trabajado en proyectos académicos y personales aplicando Java, Spring Boot, React, SQL, NoSQL, Git y Docker, con interés en construir software limpio, escalable y útil para entornos reales.',
+    'Estudiante de Ingeniería de Sistemas enfocado en Java, Spring Boot, APIs REST, bases de datos y soluciones web modernas, con proyectos académicos y personales como evidencia práctica.',
   about:
     'Soy estudiante de Ingeniería de Sistemas, con interés en el desarrollo de software, backend, bases de datos y aplicaciones web. He trabajado en proyectos académicos y personales aplicando Java, Spring Boot, JavaScript, React, SQL, NoSQL, Git y Docker. Me caracterizo por la responsabilidad, la facilidad de aprendizaje y la disposición para asumir nuevos retos tecnológicos.',
   imageSrc: '/images/profile-carlos.png',

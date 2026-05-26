@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { Code2, Mail, MapPin, MessageCircle, Network } from 'lucide-react'
 import { primaryActions, profile, socialLinks } from '../../data/profile'
 import { ActionButton } from '../ui/ActionButton'
-import { getSafeAnchorProps } from '../../utils/links'
+import { SocialIconButton } from '../ui/SocialIconButton'
+import { TypewriterText } from '../ui/TypewriterText'
 
 const socialIconByLabel = {
   Email: Mail,
@@ -11,83 +12,113 @@ const socialIconByLabel = {
   WhatsApp: MessageCircle,
 }
 
+const typewriterPhrases = [
+  'Desarrollador Backend Junior',
+  'Fullstack Junior',
+  'Java + Spring Boot',
+  'APIs REST y Bases de Datos',
+  'React + TypeScript',
+]
+
+const actionVariantByIndex = ['primary', 'secondary', 'outline'] as const
+
 export function Hero() {
   return (
-    <section id="inicio" className="px-5 pb-12 pt-12 sm:px-8 lg:px-12 lg:pb-16 lg:pt-14">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+    <section
+      id="inicio"
+      className="relative isolate px-4 py-8 sm:px-6 lg:min-h-[560px] lg:px-8 lg:py-6 xl:min-h-[600px]"
+    >
+      <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-72 max-w-5xl rounded-full bg-teal-300/10 blur-3xl" />
+
+      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(18rem,26rem)] xl:gap-12">
         <motion.div
+          className="max-w-3xl"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-300/30 bg-teal-300/10 px-3 py-1 text-sm font-medium text-teal-100">
+          <div className="inline-flex items-center gap-2 rounded-full border border-teal-300/35 bg-teal-300/10 px-3 py-1.5 text-sm font-semibold text-teal-100 shadow-[0_0_35px_rgba(45,212,191,0.12)]">
             <MapPin size={15} aria-hidden="true" />
             {profile.location}
           </div>
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+
+          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
+            Hola, soy
+          </p>
+
+          <h1 className="mt-3 max-w-4xl text-4xl font-semibold leading-[1.04] text-white sm:text-5xl xl:text-6xl">
             {profile.name}
           </h1>
-          <p className="mt-4 text-xl font-semibold text-teal-200">{profile.role}</p>
-          <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+
+          <p className="mt-5 min-h-9 text-2xl font-semibold text-teal-200 sm:text-3xl">
+            Soy <TypewriterText phrases={typewriterPhrases} />
+          </p>
+
+          <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
             {profile.summary}
           </p>
+
           <div className="mt-7 flex flex-wrap gap-3">
             {primaryActions.map((action, index) => (
               <ActionButton
                 key={action.label}
                 {...action}
-                variant={index === 0 ? 'primary' : 'secondary'}
+                variant={actionVariantByIndex[index] ?? 'secondary'}
               />
             ))}
           </div>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {socialLinks.map((link) => (
-              <a
-                aria-label={link.label}
-                className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/7 text-slate-200 transition hover:border-teal-300/50 hover:bg-teal-300/10 hover:text-teal-100"
-                href={link.href}
-                key={link.label}
-                {...getSafeAnchorProps(link.href ?? '', link.newTab)}
-              >
-                {(() => {
-                  const Icon = socialIconByLabel[link.label as keyof typeof socialIconByLabel]
-                  return Icon ? <Icon size={18} aria-hidden="true" /> : link.label
-                })()}
-              </a>
-            ))}
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            {socialLinks.map((link) => {
+              const Icon = socialIconByLabel[link.label as keyof typeof socialIconByLabel]
+
+              return Icon ? (
+                <SocialIconButton
+                  href={link.href}
+                  icon={Icon}
+                  key={link.label}
+                  label={link.label}
+                  newTab={link.newTab}
+                />
+              ) : null
+            })}
           </div>
         </motion.div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-sm lg:max-w-md"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
+          className="relative mx-auto w-full max-w-[23rem] lg:justify-self-end xl:max-w-[25rem]"
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
         >
-          <div className="overflow-hidden rounded-[2rem] border border-white/12 bg-white/8 p-4 shadow-2xl shadow-slate-950/50">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-slate-950">
+          <div className="absolute -inset-4 rounded-[2rem] bg-[conic-gradient(from_140deg,rgba(45,212,191,0.28),rgba(99,102,241,0.18),transparent,rgba(45,212,191,0.24))] opacity-80 blur-2xl" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/14 bg-white/8 p-3 shadow-2xl shadow-slate-950/50">
+            <div className="relative aspect-[4/4.7] overflow-hidden rounded-[1.35rem] bg-slate-950">
               <img
                 alt={profile.imageAlt}
-                className="h-full w-full object-cover object-[50%_18%]"
+                className="h-full w-full object-cover object-[50%_16%]"
                 height="900"
                 src={profile.imageSrc}
                 width="720"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/78 to-transparent p-6 pt-24">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-200">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/76 to-transparent p-5 pt-28">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-200">
                   Backend Focus
                 </p>
-                <p className="mt-3 text-2xl font-semibold text-white">Java · APIs · Datos</p>
-                <p className="mt-3 text-sm leading-6 text-slate-200">
-                  Enfoque junior orientado a proyectos reales, documentación clara y buenas
-                  prácticas de desarrollo.
+                <p className="mt-2 text-2xl font-semibold text-white">Java · APIs · Datos</p>
+                <p className="mt-2 text-sm leading-6 text-slate-200">
+                  Proyectos reales, documentación clara y despliegue cloud académico.
                 </p>
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-5 left-5 right-5 rounded-xl border border-white/12 bg-slate-950/90 p-4 shadow-xl shadow-slate-950/40">
+
+          <div className="absolute -right-2 top-7 hidden rounded-full border border-white/12 bg-slate-950/85 px-4 py-2 text-xs font-semibold text-teal-100 shadow-xl shadow-slate-950/35 sm:block">
+            Spring Boot
+          </div>
+          <div className="relative mx-3 -mt-7 rounded-2xl border border-white/12 bg-slate-950/92 p-4 shadow-xl shadow-slate-950/40">
             <div className="flex items-center justify-between gap-4">
-              <span className="text-sm text-slate-400">Stack principal</span>
+              <span className="text-xs text-slate-400">Stack principal</span>
               <span className="text-sm font-semibold text-white">Java / Spring Boot / React</span>
             </div>
           </div>
