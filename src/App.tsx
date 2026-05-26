@@ -1,4 +1,3 @@
-import { About } from './components/sections/About'
 import { CaseStudy } from './components/sections/CaseStudy'
 import { Certifications } from './components/sections/Certifications'
 import { Contact } from './components/sections/Contact'
@@ -15,7 +14,6 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Projects />
         <CaseStudy />
         <Skills />

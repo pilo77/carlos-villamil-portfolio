@@ -64,8 +64,8 @@ export function Hero() {
                 </p>
                 <p className="mt-3 text-2xl font-semibold text-white">Java · APIs · Datos</p>
                 <p className="mt-3 text-sm leading-6 text-slate-200">
-                  Perfil junior orientado a proyectos reales, documentación clara y buenas prácticas
-                  de desarrollo.
+                  Enfoque junior orientado a proyectos reales, documentación clara y buenas
+                  prácticas de desarrollo.
                 </p>
               </div>
             </div>

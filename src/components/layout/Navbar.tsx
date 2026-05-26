@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Code2, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  ['Sobre mí', '#sobre-mi'],
   ['Proyectos', '#proyectos'],
+  ['RematePOS', '#caso-rematepos'],
   ['Habilidades', '#habilidades'],
   ['Certificaciones', '#certificaciones'],
+  ['Formación', '#experiencia'],
   ['Contacto', '#contacto'],
 ]
 
@@ -23,10 +24,10 @@ export function Navbar() {
           href="#inicio"
           onClick={() => setIsOpen(false)}
         >
-          <span className="grid size-9 place-items-center rounded-lg bg-teal-300 text-slate-950">
-            <Code2 size={20} aria-hidden="true" />
+          <span className="grid size-9 place-items-center rounded-lg bg-teal-300 text-xs font-black tracking-tight text-slate-950">
+            CAV
           </span>
-          <span>CAVY.dev</span>
+          <span>Carlos Villamil</span>
         </a>
         <div className="hidden items-center gap-1 md:flex">
           {navItems.map(([label, href]) => (
