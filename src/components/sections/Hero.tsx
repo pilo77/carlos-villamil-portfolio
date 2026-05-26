@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion'
-import { MapPin } from 'lucide-react'
+import { Code2, Mail, MapPin, MessageCircle, Network } from 'lucide-react'
 import { primaryActions, profile, socialLinks } from '../../data/profile'
 import { ActionButton } from '../ui/ActionButton'
+import { getSafeAnchorProps } from '../../utils/links'
+
+const socialIconByLabel = {
+  Email: Mail,
+  GitHub: Code2,
+  LinkedIn: Network,
+  WhatsApp: MessageCircle,
+}
 
 export function Hero() {
   return (
-    <section id="inicio" className="px-5 pb-16 pt-14 sm:px-8 lg:px-12 lg:pb-20 lg:pt-18">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.12fr_0.88fr]">
+    <section id="inicio" className="px-5 pb-12 pt-12 sm:px-8 lg:px-12 lg:pb-16 lg:pt-14">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,14 +24,14 @@ export function Hero() {
             <MapPin size={15} aria-hidden="true" />
             {profile.location}
           </div>
-          <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
             {profile.name}
           </h1>
-          <p className="mt-5 text-xl font-semibold text-teal-200">{profile.role}</p>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mt-4 text-xl font-semibold text-teal-200">{profile.role}</p>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
             {profile.summary}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             {primaryActions.map((action, index) => (
               <ActionButton
                 key={action.label}
@@ -32,19 +40,26 @@ export function Hero() {
               />
             ))}
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-2">
             {socialLinks.map((link) => (
-              <ActionButton
+              <a
+                aria-label={link.label}
+                className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/7 text-slate-200 transition hover:border-teal-300/50 hover:bg-teal-300/10 hover:text-teal-100"
+                href={link.href}
                 key={link.label}
-                {...link}
-                variant={link.href ? 'secondary' : 'ghost'}
-              />
+                {...getSafeAnchorProps(link.href ?? '', link.newTab)}
+              >
+                {(() => {
+                  const Icon = socialIconByLabel[link.label as keyof typeof socialIconByLabel]
+                  return Icon ? <Icon size={18} aria-hidden="true" /> : link.label
+                })()}
+              </a>
             ))}
           </div>
         </motion.div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto w-full max-w-sm lg:max-w-md"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
@@ -70,7 +85,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-5 left-6 right-6 rounded-xl border border-white/12 bg-slate-950/90 p-4 shadow-xl shadow-slate-950/40">
+          <div className="absolute -bottom-5 left-5 right-5 rounded-xl border border-white/12 bg-slate-950/90 p-4 shadow-xl shadow-slate-950/40">
             <div className="flex items-center justify-between gap-4">
               <span className="text-sm text-slate-400">Stack principal</span>
               <span className="text-sm font-semibold text-white">Java / Spring Boot / React</span>

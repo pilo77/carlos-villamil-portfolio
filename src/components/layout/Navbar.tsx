@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Code2, FileText, Menu, Network, X } from 'lucide-react'
+import { getSafeAnchorProps } from '../../utils/links'
 
 const navItems = [
   ['Proyectos', '#proyectos'],
@@ -8,6 +9,25 @@ const navItems = [
   ['Certificaciones', '#certificaciones'],
   ['Formación', '#experiencia'],
   ['Contacto', '#contacto'],
+]
+
+const quickLinks = [
+  {
+    href: 'https://github.com/pilo77',
+    icon: Code2,
+    label: 'GitHub',
+  },
+  {
+    href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
+    icon: Network,
+    label: 'LinkedIn',
+  },
+  {
+    href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
+    icon: FileText,
+    label: 'CV Español',
+    newTab: true,
+  },
 ]
 
 export function Navbar() {
@@ -29,7 +49,7 @@ export function Navbar() {
           </span>
           <span>Carlos Villamil</span>
         </a>
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {navItems.map(([label, href]) => (
             <a
               className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/8 hover:text-white"
@@ -37,6 +57,19 @@ export function Navbar() {
               key={href}
             >
               {label}
+            </a>
+          ))}
+        </div>
+        <div className="hidden items-center gap-2 md:flex">
+          {quickLinks.map(({ href, icon: Icon, label, newTab }) => (
+            <a
+              aria-label={label}
+              className="grid size-9 place-items-center rounded-lg border border-white/10 bg-white/7 text-slate-200 transition hover:border-teal-300/50 hover:bg-teal-300/10 hover:text-teal-100"
+              href={href}
+              key={label}
+              {...getSafeAnchorProps(href, newTab)}
+            >
+              <Icon size={17} aria-hidden="true" />
             </a>
           ))}
         </div>
@@ -67,6 +100,20 @@ export function Navbar() {
                 {label}
               </a>
             ))}
+            <div className="mt-3 grid grid-cols-3 gap-2 border-t border-white/10 pt-4">
+              {quickLinks.map(({ href, icon: Icon, label, newTab }) => (
+                <a
+                  aria-label={label}
+                  className="grid min-h-11 place-items-center rounded-lg border border-white/10 bg-white/7 text-slate-200 transition hover:border-teal-300/50 hover:bg-teal-300/10"
+                  href={href}
+                  key={label}
+                  onClick={() => setIsOpen(false)}
+                  {...getSafeAnchorProps(href, newTab)}
+                >
+                  <Icon size={18} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       ) : null}
