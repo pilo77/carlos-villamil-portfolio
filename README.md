@@ -104,22 +104,42 @@ npm install
 npm run dev
 ```
 
-## Scripts
+## Comandos principales
 
 ```bash
+npm install
 npm run dev
 npm run lint
 npm run build
 npm run preview
 ```
 
-## Despliegue en Vercel
+## CI/CD y despliegue
+
+El proyecto se despliega en Vercel mediante la integración directa con GitHub. Vercel genera Preview Deployments para ramas y Pull Requests, y la publicación de producción debe quedar asociada a la rama `main`.
+
+GitHub Actions valida calidad antes de integrar cambios: ejecuta instalación reproducible con `npm ci`, `npm run lint` y `npm run build`. El workflow no despliega, no usa tokens de Vercel y no requiere secrets; el despliegue lo sigue manejando Vercel.
+
+Flujo recomendado:
+
+1. Crear una rama `feature`.
+2. Hacer cambios.
+3. Crear un commit convencional.
+4. Hacer push de la rama.
+5. Revisar el Preview Deployment en Vercel.
+6. Abrir Pull Request hacia `main`.
+7. Esperar CI OK.
+8. Hacer merge a `main`.
+9. Vercel actualiza producción.
+
+## Configuración de Vercel
 
 Configuración recomendada:
 
 - Framework: Vite
-- Build command: `npm run build`
-- Output directory: `dist`
+- Install Command: `npm install` o `npm ci`
+- Build Command: `npm run build`
+- Output Directory: `dist`
 - Node.js: 20 o superior
 
 Pasos:
