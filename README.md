@@ -12,6 +12,7 @@ El objetivo del sitio es presentar perfil profesional, proyectos reales, habilid
 - Tailwind CSS
 - Framer Motion
 - Lucide React
+- React Icons
 - ESLint
 - Prettier
 
@@ -19,6 +20,7 @@ El objetivo del sitio es presentar perfil profesional, proyectos reales, habilid
 
 - Hero compacto con texto dinámico tipo máquina de escribir implementado con React hooks.
 - Botones sociales circulares con estados hover, foco visible y enlaces seguros.
+- Iconografía reconocible para GitHub, LinkedIn, WhatsApp, correo y Credly.
 - Fondo oscuro con grid sutil, spotlight y gradientes controlados.
 - Proyectos con imagen/mockup, overlay al hover y repositorios agrupados.
 - Contacto compacto tipo dock con acciones principales y CV.
@@ -134,7 +136,8 @@ Pasos:
 - RematePOS configurado como proyecto principal con demo y servicios cloud.
 - CV en español servido desde `public/cv`.
 - Foto profesional servida desde `public/images`.
-- GitHub, LinkedIn, correo y WhatsApp configurados como contacto público.
+- GitHub, LinkedIn, Credly, correo y WhatsApp configurados como contacto público.
+- Perfil Credly configurado para verificar insignias y certificaciones internacionales.
 - CV en inglés queda pendiente hasta tener el archivo real.
 - No se incluyen secretos ni rutas locales públicas.
 
@@ -142,6 +145,7 @@ Pasos:
 
 - GitHub: https://github.com/pilo77
 - LinkedIn: https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira
+- Credly: https://www.credly.com/users/carlos-andres-villamil-yusunguaira
 - Correo: carlosandresvilla123carlos@gmail.com
 - WhatsApp: https://wa.me/573229417100
 
