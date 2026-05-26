@@ -1,19 +1,11 @@
 import type { ActionLink } from '../../types'
 import { clsx } from 'clsx'
 import { getSafeAnchorProps } from '../../utils/links'
+import { AnchorButton } from './Button'
+import { getButtonClassName, type ButtonVariant } from './buttonStyles'
 
 interface ActionButtonProps extends ActionLink {
-  variant?: 'primary' | 'secondary' | 'ghost'
-}
-
-const baseClass =
-  'inline-flex min-h-11 items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition'
-
-const variantClass = {
-  primary: 'bg-teal-300 text-slate-950 shadow-lg shadow-teal-950/20 hover:bg-teal-200',
-  secondary:
-    'border border-white/15 bg-white/10 text-white hover:border-teal-300/60 hover:bg-white/15',
-  ghost: 'text-slate-200 hover:text-teal-200',
+  variant?: ButtonVariant
 }
 
 export function ActionButton({
@@ -30,7 +22,7 @@ export function ActionButton({
         aria-disabled="true"
         title={note}
         className={clsx(
-          baseClass,
+          getButtonClassName({ variant }),
           'cursor-not-allowed border border-white/10 bg-white/5 text-slate-400',
         )}
       >
@@ -40,12 +32,8 @@ export function ActionButton({
   }
 
   return (
-    <a
-      className={clsx(baseClass, variantClass[variant])}
-      href={href}
-      {...getSafeAnchorProps(href, newTab)}
-    >
+    <AnchorButton href={href} variant={variant} {...getSafeAnchorProps(href, newTab)}>
       {label}
-    </a>
+    </AnchorButton>
   )
 }

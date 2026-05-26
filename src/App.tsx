@@ -7,10 +7,12 @@ import { Skills } from './components/sections/Skills'
 import { Timeline } from './components/sections/Timeline'
 import { Footer } from './components/layout/Footer'
 import { Navbar } from './components/layout/Navbar'
+import { BackgroundEffects } from './components/ui/BackgroundEffects'
 
 function App() {
   return (
-    <div className="min-h-screen overflow-hidden text-slate-100">
+    <div className="relative isolate min-h-screen overflow-hidden text-slate-100">
+      <BackgroundEffects />
       <Navbar />
       <main>
         <Hero />
