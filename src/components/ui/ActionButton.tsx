@@ -6,6 +6,7 @@ import { getButtonClassName, type ButtonVariant } from './buttonStyles'
 
 interface ActionButtonProps extends ActionLink {
   variant?: ButtonVariant
+  className?: string
 }
 
 export function ActionButton({
@@ -15,6 +16,7 @@ export function ActionButton({
   note,
   newTab,
   variant = 'secondary',
+  className,
 }: ActionButtonProps) {
   if (status === 'disabled' || status === 'pending' || !href) {
     return (
@@ -23,6 +25,7 @@ export function ActionButton({
         title={note}
         className={clsx(
           getButtonClassName({ variant }),
+          className,
           'cursor-not-allowed border border-white/10 bg-white/5 text-slate-400',
         )}
       >
@@ -32,7 +35,7 @@ export function ActionButton({
   }
 
   return (
-    <AnchorButton href={href} variant={variant} {...getSafeAnchorProps(href, newTab)}>
+    <AnchorButton className={className} href={href} variant={variant} {...getSafeAnchorProps(href, newTab)}>
       {label}
     </AnchorButton>
   )
