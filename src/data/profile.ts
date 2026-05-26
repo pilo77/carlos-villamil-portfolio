@@ -16,6 +16,11 @@ export const primaryActions: ActionLink[] = [
   { label: 'Ver proyectos', href: '#proyectos' },
   { label: 'Ver RematePOS', href: '#caso-rematepos' },
   {
+    label: 'Ver insignias en Credly',
+    href: 'https://www.credly.com/users/carlos-andres-villamil-yusunguaira',
+    newTab: true,
+  },
+  {
     label: 'CV Español',
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
     newTab: true,
@@ -31,6 +36,11 @@ export const socialLinks: ActionLink[] = [
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
+    newTab: true,
+  },
+  {
+    label: 'Credly',
+    href: 'https://www.credly.com/users/carlos-andres-villamil-yusunguaira',
     newTab: true,
   },
   {
@@ -55,6 +65,12 @@ export const contactLinks: ContactLink[] = [
     label: 'LinkedIn',
     icon: 'linkedin',
     href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
+    newTab: true,
+  },
+  {
+    label: 'Credly',
+    icon: 'credly',
+    href: 'https://www.credly.com/users/carlos-andres-villamil-yusunguaira',
     newTab: true,
   },
   {

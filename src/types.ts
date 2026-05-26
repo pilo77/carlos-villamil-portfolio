@@ -20,7 +20,7 @@ export interface Profile {
   imageAlt: string
 }
 
-export type ContactIconName = 'github' | 'linkedin' | 'mail' | 'whatsapp' | 'file'
+export type ContactIconName = 'github' | 'linkedin' | 'mail' | 'whatsapp' | 'file' | 'credly'
 
 export interface ContactLink extends ActionLink {
   icon: ContactIconName
