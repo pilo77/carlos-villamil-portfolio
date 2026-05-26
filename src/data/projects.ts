@@ -30,6 +30,8 @@ export const projects: Project[] = [
     featured: true,
     status: 'Demo cloud disponible',
     mockupLabel: 'POS',
+    summary:
+      'Aplicación web para ventas, inventario, caja, clientes, devoluciones y facturación simulada tipo DIAN.',
     description:
       'Aplicación web para gestión de ventas, productos, inventario, clientes, caja, devoluciones y facturación simulada tipo DIAN. Proyecto académico desarrollado con enfoque en arquitectura por servicios, APIs REST, seguridad, bases de datos relacionales/no relacionales y despliegue cloud.',
     problem:
@@ -69,6 +71,11 @@ export const projects: Project[] = [
     ],
     repoLinks: [
       {
+        label: 'Repo principal',
+        status: 'available',
+        url: 'https://github.com/RematePos/RematePos',
+      },
+      {
         label: 'Frontend',
         status: 'available',
         url: 'https://github.com/RematePos/RematePos-Frontend',
@@ -94,6 +101,8 @@ export const projects: Project[] = [
     name: 'Clasificación de imágenes con IA',
     status: 'Demo académica / en desarrollo',
     mockupLabel: 'AI',
+    summary:
+      'Demo académica de clasificación de imágenes con Python, deep learning y una interfaz de presentación simple.',
     description:
       'Aplicación académica para clasificación de imágenes usando modelos de deep learning, Streamlit y Python.',
     problem:
@@ -114,6 +123,8 @@ export const projects: Project[] = [
     name: 'Portafolio profesional',
     status: 'Listo para despliegue',
     mockupLabel: 'WEB',
+    summary:
+      'Sitio personal para presentar perfil profesional, proyectos, habilidades, CV y enlaces de contacto.',
     description:
       'Sitio web personal para centralizar perfil profesional, proyectos, certificaciones, habilidades y enlaces de contacto.',
     problem:

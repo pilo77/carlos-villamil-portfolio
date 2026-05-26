@@ -9,60 +9,85 @@ interface ProjectCardProps {
   index: number
 }
 
+const compactedFeaturedLabels = new Set(['Ver código', 'Documentación'])
+
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const visibleLinks = project.featured
+    ? project.links.filter((link) => !compactedFeaturedLabels.has(link.label))
+    : project.links
+  const overlayLinks = visibleLinks.filter((link) => link.href).slice(0, project.featured ? 2 : 1)
+
   return (
     <motion.article
-      className="group overflow-hidden rounded-xl border border-white/10 bg-white/8 shadow-xl shadow-slate-950/20 transition hover:border-teal-300/35 hover:bg-white/10"
+      className={`group overflow-hidden rounded-2xl border border-white/10 bg-slate-950/48 p-3 shadow-xl shadow-slate-950/25 ring-1 ring-white/5 transition hover:border-teal-300/35 hover:bg-white/8 sm:p-4 ${
+        project.featured ? 'lg:col-span-2' : ''
+      }`}
       initial={{ opacity: 0, y: 22 }}
       transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
       whileHover={{ y: -6 }}
       whileInView={{ opacity: 1, y: 0 }}
     >
-      <ProjectMockup label={project.mockupLabel} status={project.status} />
-
-      <div className="p-6">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <h3 className="text-2xl font-semibold text-white">{project.name}</h3>
-          {project.featured ? (
-            <span className="rounded-full bg-teal-300 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-950">
-              Principal
-            </span>
-          ) : null}
+      <div className={project.featured ? 'grid gap-5 lg:grid-cols-[1.02fr_0.98fr]' : 'grid gap-4'}>
+        <div className="relative">
+          <ProjectMockup project={project} />
+          <div className="absolute inset-0 hidden items-end rounded-2xl bg-gradient-to-t from-slate-950/94 via-slate-950/46 to-transparent p-5 opacity-0 transition duration-300 group-hover:opacity-100 md:flex">
+            <div>
+              <p className="text-lg font-semibold text-white">{project.name}</p>
+              <p className="mt-2 max-w-xl text-sm leading-6 text-slate-300">{project.status}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {overlayLinks.map((link, linkIndex) => (
+                  <ActionButton
+                    key={link.label}
+                    {...link}
+                    variant={linkIndex === 0 ? 'primary' : 'secondary'}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="mt-5 leading-7 text-slate-300">{project.description}</p>
-        <div className="mt-5 space-y-3 text-sm leading-6 text-slate-300">
-          <p>
-            <strong className="text-slate-100">Problema:</strong> {project.problem}
-          </p>
-          <p>
+
+        <div className="p-2 sm:p-3">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-200">
+                {project.status}
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold text-white">{project.name}</h3>
+            </div>
+            {project.featured ? (
+              <span className="rounded-full bg-teal-300 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-slate-950">
+                Principal
+              </span>
+            ) : null}
+          </div>
+          <p className="mt-4 leading-7 text-slate-300">{project.summary ?? project.description}</p>
+          <p className="mt-4 text-sm leading-6 text-slate-400">
             <strong className="text-slate-100">Rol:</strong> {project.role}
           </p>
-          <p>
-            <strong className="text-slate-100">Aprendizaje:</strong> {project.learning}
-          </p>
-        </div>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              className="rounded-md bg-slate-950/60 px-2.5 py-1 text-xs text-slate-300"
-              key={tech}
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {project.technologies.slice(0, project.featured ? 9 : 6).map((tech) => (
+              <span
+                className="rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-xs text-slate-300"
+                key={tech}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
 
-        {project.repoLinks ? <RepositoryLinks repositories={project.repoLinks} /> : null}
+          {project.repoLinks ? <RepositoryLinks repositories={project.repoLinks} /> : null}
 
-        <div className="mt-6 flex flex-wrap gap-3">
-          {project.links.map((link, linkIndex) => (
-            <ActionButton
-              key={link.label}
-              {...link}
-              variant={linkIndex === 0 && link.href ? 'primary' : 'secondary'}
-            />
-          ))}
+          <div className="mt-5 flex flex-wrap gap-3">
+            {visibleLinks.map((link, linkIndex) => (
+              <ActionButton
+                key={link.label}
+                {...link}
+                variant={linkIndex === 0 && link.href ? 'primary' : 'secondary'}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </motion.article>
