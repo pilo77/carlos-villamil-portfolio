@@ -20,12 +20,6 @@ export const primaryActions: ActionLink[] = [
     href: '/cv/CV_Carlos_Andres_Villamil_Yusunguaira_ES.pdf',
     newTab: true,
   },
-  {
-    label: 'CV English próximamente',
-    status: 'pending',
-    note: 'Pendiente de agregar la versión en inglés del CV',
-  },
-  { label: 'Contactar', href: '#contacto' },
 ]
 
 export const socialLinks: ActionLink[] = [
@@ -36,8 +30,17 @@ export const socialLinks: ActionLink[] = [
   },
   {
     label: 'LinkedIn',
-    status: 'pending',
-    note: 'Pendiente de agregar URL pública',
+    href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
+    newTab: true,
+  },
+  {
+    label: 'Email',
+    href: 'mailto:carlosandresvilla123carlos@gmail.com',
+  },
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/573229417100',
+    newTab: true,
   },
 ]
 
@@ -51,8 +54,8 @@ export const contactLinks: ContactLink[] = [
   {
     label: 'LinkedIn',
     icon: 'linkedin',
-    status: 'pending',
-    note: 'Pendiente de agregar URL pública',
+    href: 'https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira',
+    newTab: true,
   },
   {
     label: 'Correo',
