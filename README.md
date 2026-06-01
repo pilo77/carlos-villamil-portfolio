@@ -1,5 +1,9 @@
 # Portafolio profesional - Carlos Andrés Villamil Yusunguaira
 
+Professional portfolio built with React, TypeScript, Vite and Tailwind CSS. Includes projects, certifications, RematePOS case study and CI/CD validation with GitHub Actions, deployed publicly on Vercel.
+
+Sitio público: https://carlos-villamil-portfolio.vercel.app
+
 Portafolio web profesional de Carlos Andrés Villamil Yusunguaira, estudiante de Ingeniería de Sistemas en CORHUILA, enfocado en práctica profesional, contrato de aprendizaje o primer rol junior en desarrollo backend/fullstack.
 
 El objetivo del sitio es presentar perfil profesional, proyectos reales, habilidades técnicas, certificaciones, CV en español y canales de contacto para hoja de vida, LinkedIn, GitHub y postulaciones laborales.
@@ -15,6 +19,34 @@ El objetivo del sitio es presentar perfil profesional, proyectos reales, habilid
 - React Icons
 - ESLint
 - Prettier
+
+## Metadatos recomendados del repositorio
+
+Descripción:
+
+```text
+Professional portfolio built with React, TypeScript, Vite and Tailwind CSS. Includes projects, certifications, RematePOS case study and CI/CD deployment with Vercel.
+```
+
+Website:
+
+```text
+https://carlos-villamil-portfolio.vercel.app
+```
+
+Topics:
+
+```text
+portfolio
+react
+typescript
+vite
+tailwindcss
+frontend
+developer-portfolio
+vercel
+github-actions
+```
 
 ## Diseño e interacción
 
@@ -116,7 +148,7 @@ npm run preview
 
 ## CI/CD y despliegue
 
-El proyecto se despliega en Vercel mediante la integración directa con GitHub. Vercel genera Preview Deployments para ramas y Pull Requests, y la publicación de producción debe quedar asociada a la rama `main`.
+El proyecto se despliega en Vercel mediante la integración directa con GitHub. Vercel genera Preview Deployments para ramas y Pull Requests, y la publicación de producción debe quedar asociada a la rama principal configurada en Vercel.
 
 GitHub Actions valida calidad antes de integrar cambios: ejecuta instalación reproducible con `npm ci`, `npm run lint` y `npm run build`. El workflow no despliega, no usa tokens de Vercel y no requiere secrets; el despliegue lo sigue manejando Vercel.
 
@@ -163,6 +195,7 @@ Pasos:
 
 ## Enlaces de contacto
 
+- Portafolio: https://carlos-villamil-portfolio.vercel.app
 - GitHub: https://github.com/pilo77
 - LinkedIn: https://www.linkedin.com/in/carlos-andres-villamil-yusunguaira
 - Credly: https://www.credly.com/users/carlos-andres-villamil-yusunguaira
